@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');  
+
+body {  
+    font-family: 'Montserrat', sans-serif;  
+    color: #fff;  
+    background-color: #343a40;  
+    transition: background-color 0.5s ease-in-out;  
+}  
+
+header, footer {  
+    background-color: rgba(0, 0, 0, 0.7);  
+}  
+
+.card {  
+    background-color: rgba(0, 0, 0, 0.6) !important;  
+    border: none;  
+}  
+
+#story-text {  
+    min-height: 100px;  
+}  
+
+button {  
+    transition: transform 0.2s, background-color 0.3s;  
+}  
+
+button:hover {  
+    transform: scale(1.05);  
+}  
+
+.scene-image {  
+    width: auto;  
+    height: 300px;  
+    object-fit: cover;  
+    border-radius: 10px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  
+}  
+
+.modal .btn-danger {  
+    width: 100%;  
+    font-size: 1.2rem;  
+}

@@ -1,0 +1,352 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #ff0080 0%, #7928ca 100%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #111827;
+    position: relative;
+    /* Default context */
+}
+
+/* Background Wrapper to avoid body becoming a containing block for fixed elements */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Dynamic Minimalist Pink Gradient */
+    /* Moving Pink Blobs Background */
+    background-color: #ffffff;
+    background-image:
+        /* Top/Bottom White Mask for contrast */
+        linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0) 85%, #ffffff 100%),
+        /* Blob 1 (Pink) */
+        radial-gradient(circle at 50% 50%, #fce7f3 0%, transparent 50%),
+        /* Blob 2 (Light Blue/Purple tint for depth) */
+        radial-gradient(circle at 80% 20%, #eff6ff 0%, transparent 40%),
+        /* Blob 3 (Pink) */
+        radial-gradient(circle at 20% 80%, #fdf2f8 0%, transparent 50%);
+    background-size: 100% 100%, 150% 150%, 150% 150%, 150% 150%;
+    animation: blobMovement 20s ease-in-out infinite alternate;
+}
+
+@keyframes blobMovement {
+    0% {
+        background-position: 0% 0%, 50% 50%, 80% 20%, 20% 80%;
+    }
+
+    50% {
+        background-position: 0% 0%, 55% 45%, 75% 25%, 25% 75%;
+    }
+
+    100% {
+        background-position: 0% 0%, 45% 55%, 85% 15%, 15% 85%;
+    }
+}
+
+/* Override utility for navbar scroll state/footer to match theme */
+.bg-white,
+.bg-white\/80 {
+    background-color: rgba(255, 245, 247, 0.9) !important;
+    /* Light pink glass */
+    backdrop-filter: blur(10px);
+}
+
+/* Ensure footer matches */
+footer.bg-white {
+    background-color: rgba(255, 245, 247, 0.9) !important;
+    border-top-color: rgba(255, 228, 230, 0.5);
+    /* Lighter border */
+}
+
+.font-serif-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.heading-xl {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+    .heading-xl {
+        font-size: 80px;
+        line-height: 80px;
+    }
+}
+
+.pink-gradient-text {
+    background: linear-gradient(135deg, #ff0080 0%, #7928ca 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    /* Essential for the gradient to show */
+}
+
+bkit-text-fill-color: transparent;
+
+
+.btn-hover {
+    transition: transform 0.3s ease;
+}
+
+.btn-hover:hover {
+    transform: scale(1.05);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Skills bubble style */
+.skill-bubble {
+    padding: 8px 16px;
+    background: #fdf2f8;
+    border: 1px solid #fbcfe8;
+    color: #db2777;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Navigation Active State */
+.nav-link.active {
+    color: #db2777;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #db2777;
+    transition: width .3s;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+.hidden-section {
+    display: none;
+}
+
+.hidden-section {
+    display: none;
+}
+
+/* Contact Form Styles */
+.contact-input {
+    width: 100%;
+    padding: 16px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.contact-input:focus {
+    background-color: #fff;
+    border-color: #f472b6;
+    box-shadow: 0 0 0 4px rgba(244, 114, 182, 0.1);
+}
+
+.submit-btn {
+    background: #111827;
+    color: white;
+    font-weight: 700;
+    padding: 16px 48px;
+    border-radius: 9999px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #ff0080 0%, #7928ca 100%);
+}
+
+/* Error state for inputs */
+.contact-input.error {
+    border-color: #ef4444;
+    /* Tailwind red-500 */
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+/* Custom Cursor */
+body.custom-cursor-active {
+    cursor: none;
+}
+
+body.custom-cursor-active a,
+body.custom-cursor-active button,
+body.custom-cursor-active input,
+body.custom-cursor-active textarea {
+    cursor: none;
+}
+
+#cursor-dot,
+#cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+#cursor-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #be185d;
+    /* Darker Pink 700 */
+    box-shadow: 0 0 4px rgba(190, 24, 93, 0.5);
+    /* Glowing shadow */
+}
+
+/* Rotating dashed outline */
+#cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px dashed rgba(219, 39, 119, 0.9);
+    /* Thicker & more opaque */
+    box-shadow: 0 0 8px rgba(219, 39, 119, 0.2);
+    /* Soft shadow */
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+    animation: rotateCursor 10s linear infinite;
+}
+
+@keyframes rotateCursor {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Hover effect for cursor */
+body.custom-cursor-active .cursor-hover-active #cursor-outline {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(219, 39, 119, 0.1);
+    border-color: rgba(219, 39, 119, 0.8);
+    border-style: solid;
+    /* Shrink effect override */
+    width: 12px;
+    height: 12px;
+    background-color: rgba(219, 39, 119, 0.8);
+    border: none;
+}
+
+/* Button Gradient Hover Effect */
+.btn-gradient-hover {
+    transition: all 0.3s ease;
+    border: 2px solid #111827;
+    /* Default border matching common buttons */
+}
+
+.btn-gradient-hover:hover {
+    background-image: var(--primary-gradient);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(219, 39, 119, 0.3);
+    /* Pink shadow */
+}
+
+/* Social Media Brand Colors */
+/* Social Icon Base */
+.social-icon-btn {
+    transition: all 0.3s ease;
+}
+
+/* Social Media Brand Colors */
+.hover-linkedin:hover {
+    color: #0077b5 !important;
+}
+
+.hover-instagram:hover {
+    color: #E4405F !important;
+}
+
+.hover-github:hover {
+    color: #333333 !important;
+}
+
+/* Lightbox Overlay */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: zoom-out;
+}
+
+#lightbox.active {
+    opacity: 1;
+}
+
+#lightbox img {
+    max-width: 80%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+    #lightbox img {
+        max-width: 1000px;
+        /* Cap width on large screens */
+    }
+}
+
+#lightbox.active img {
+    transform: scale(1);
+}
+
+.gallery-img {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}

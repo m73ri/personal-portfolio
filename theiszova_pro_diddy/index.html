@@ -1,0 +1,56 @@
+<!DOCTYPE html>  
+<html lang="cs">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>P. Diddy: Osudová rozhodnutí</title>  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body class="d-flex flex-column min-vh-100">  
+    <header class="bg-dark bg-opacity-75 text-center py-3">  
+        <h1 class="text-danger">P. Diddy: Osudová rozhodnutí</h1>  
+    </header>  
+    <main class="flex-grow-1 d-flex align-items-center justify-content-center">  
+        <div class="card text-white bg-dark bg-opacity-75 p-4 rounded">  
+            <div class="card-body text-center">  
+                <p id="story-text" class="card-text fs-5">Vítejte! P. Diddy dostává nabídku na riskantní spolupráci...</p>  
+                <img id="scene-image" src="images/diddy.jpg" alt="Scéna" class="img-fluid img-thumbnail mt-3 scene-image">  
+                <div id="choices" class="mt-4">  
+                    <button class="btn btn-danger btn-lg mx-2" onclick="choosePath('accept')">Přijmout nabídku</button>  
+                    <button class="btn btn-outline-danger btn-lg mx-2" onclick="choosePath('reject')">Odmítnout nabídku</button>  
+                </div>  
+            </div>  
+        </div>  
+    </main>  
+    
+    <div class="modal fade" id="loseModal" tabindex="-1" aria-labelledby="loseModalLabel" aria-hidden="true">  
+        <div class="modal-dialog modal-fullscreen">  
+            <div class="modal-content bg-dark bg-opacity-90">  
+                <div class="modal-body d-flex justify-content-center align-items-center">  
+                    <img src="images/jumpscare.jpg" alt="Prohra" class="img-fluid">  
+                </div>  
+                <div class="modal-footer">  
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zpět na začátek</button>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+
+    <div class="modal fade" id="winModal" tabindex="-1" aria-labelledby="winModalLabel" aria-hidden="true">  
+        <div class="modal-dialog modal-fullscreen">  
+            <div class="modal-content bg-dark bg-opacity-90">  
+                <div class="modal-body d-flex justify-content-center align-items-center">  
+                    <img src="images/diddyvyhra.jpg" alt="Výhra" class="img-fluid">  
+                </div>  
+                <div class="modal-footer">  
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zpět na začátek</button>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  
+    <script src="script.js"></script>  
+</body>  
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marianna Theiszová | About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital@1&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #ff0080 0%, #7928ca 100%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #111827;
+        }
+
+        .font-serif-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        .pink-gradient-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link.active {
+            color: #db2777;
+        }
+
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #db2777;
+            transition: width .3s;
+            position: absolute;
+            bottom: -4px;
+        }
+
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .social-icon-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: white;
+            border: 1px solid #f3f4f6;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            color: #4b5563;
+        }
+
+        .social-icon-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            color: #db2777;
+        }
+
+        .ux-card {
+            background: #fafafa;
+            border: 1px solid #f0f0f0;
+            border-radius: 24px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .ux-card:hover {
+            border-color: #fbcfe8;
+            background: #fff;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-8 bg-transparent">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="home.html" class="text-2xl font-bold cursor-pointer pink-gradient-text font-serif-italic">
+                Marianna Theiszová
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex gap-10">
+                <a href="home.html" class="nav-link text-xs font-bold tracking-widest uppercase">Home</a>
+                <a href="www.html" class="nav-link text-xs font-bold tracking-widest uppercase">WWW</a>
+                <a href="dim.html" class="nav-link text-xs font-bold tracking-widest uppercase">DIM</a>
+                <a href="about.html" class="nav-link active text-xs font-bold tracking-widest uppercase">About Me</a>
+                <a href="dance.html" class="nav-link text-xs font-bold tracking-widest uppercase">Dance</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="md:hidden" onclick="toggleMobileMenu()">
+                <i data-lucide="menu" id="menu-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white hidden flex-col items-center justify-center space-y-10">
+        <button onclick="toggleMobileMenu()" class="absolute top-8 right-6"><i data-lucide="x"
+                class="w-8 h-8"></i></button>
+        <a href="home.html" class="text-3xl font-bold hover:text-pink-500 transition-colors">HOME</a>
+        <a href="www.html" class="text-3xl font-bold hover:text-pink-500 transition-colors">WWW</a>
+        <a href="dim.html" class="text-3xl font-bold hover:text-pink-500 transition-colors">DIM</a>
+        <a href="about.html" class="text-3xl font-bold hover:text-pink-500 transition-colors">ABOUT ME</a>
+        <a href="dance.html" class="text-3xl font-bold hover:text-pink-500 transition-colors">DANCE</a>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-20">
+        <section id="about" class="space-y-32">
+
+            <!-- Intro Section: Text first on mobile (flex-col-reverse) -->
+            <div class="flex flex-col-reverse lg:flex-row gap-16 items-center fade-in">
+
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 space-y-8">
+                    <div class="space-y-4 text-center lg:text-left">
+                        <h1 class="text-4xl md:text-5xl font-bold leading-tight">Kreativní duše s <br><span
+                                class="pink-gradient-text">Technickým základem</span></h1>
+                        <p class="text-xl text-gray-500 italic font-serif-italic">Marianna Theiszová — Studentka SOŠAIG
+                        </p>
+                    </div>
+                    <div class="space-y-6 text-gray-600 leading-relaxed text-lg text-justify">
+                        Aktuálně dokončuji studium Multimediální komunikace na SŠAIG, které mě naučilo propojovat svět
+                        IT, grafického designu a marketingu. Jsem cílevědomá a momentálně se plně soustředím na
+                        maturitu, kterou chci absolvovat s vyznamenáním. Mám za sebou bohatou historii v týmovém sportu
+                        díky dlouholetému tanci, což mě naučilo disciplíně, kterou nyní uplatňuji nejen při cvičení, ale
+                        i v pracovním životě. Zkušenosti s komunikací a odpovědností jsem získala během roční praxe na
+                        recepci fitness centra a jako hosteska ve VIP prostorech O2 arény. Mimo školu a práci směřuji
+                        veškerou svou kreativní energii do hudby. Od 13 let se věnuji zpěvu, píši texty a začínám s
+                        vlastní produkcí. Nově objevuji také svět DJingu, ve kterém si prozatím buduji portfolio setů.
+                        Ačkoliv nyní věnuji maximum času studiu, hudba a multimediální tvorba jsou směrem, kterým se
+                        plánuji naplno vydat ihned po ukončení školy.
+                        </p>
+                    </div>
+                    <div class="flex gap-4 justify-center lg:justify-start">
+                        <a href="https://www.linkedin.com/in/marianna-theiszová-887a5729a" target="_blank"
+                            class="social-icon-btn hover-linkedin"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/mari737373733737/" target="_blank"
+                            class="social-icon-btn hover-instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="https://github.com/m73ri" target="_blank" class="social-icon-btn hover-github"><i
+                                data-lucide="github" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Image Container -->
+                <div class="w-full lg:w-1/2 flex justify-center">
+                    <div class="relative group max-w-[80%] w-full">
+                        <div
+                            class="absolute -inset-4 bg-gradient-to-r from-pink-500 to-purple-600 rounded-[4rem] blur opacity-10">
+                        </div>
+                        <div
+                            class="relative bg-gray-200 rounded-[3rem] aspect-[4/5] overflow-hidden flex items-center justify-center border border-gray-100 shadow-sm">
+                            <img src="img/ruzovahlava.jpg" alt="Marianna Theiszová" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UX/UI Section -->
+            <div class="space-y-16 fade-in pt-10">
+                <div class="text-center space-y-4">
+                    <h2 class="text-3xl font-bold">Čemu se věnuji a co ovládám</h2>
+                    <div class="w-20 h-1 bg-pink-500 mx-auto rounded-full"></div>
+                    <p class="max-w-2xl mx-auto text-gray-500">Studium multimediální komunikace mě naučilo vnímat design
+                        jako celek – od grafického návrhu až po jeho realizaci na webu nebo v marketingu.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="ux-card space-y-4 text-center md:text-left">
+                        <div
+                            class="w-12 h-12 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-600 mx-auto md:mx-0">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Grafický design</h3>
+                        <p class="text-gray-500 text-sm">Grafický design
+                            Návrhy uživatelského rozhraní (UI).
+                            Práce s barvami, kompozicí a typografií.
+                            Propojení grafiky s marketingovými cíli.</p>
+                    </div>
+                    <div class="ux-card space-y-4 text-center md:text-left">
+                        <div
+                            class="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 mx-auto md:mx-0">
+                            <i data-lucide="pencil-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Vývoj webů</h3>
+                        <p class="text-gray-500 text-sm">Kódování Single-page webů v HTML a CSS.
+                            Základy práce s JavaScriptem.
+                            Tvorba responzivních rozvržení (layoutů).</p>
+                    </div>
+                    <div class="ux-card space-y-4 text-center md:text-left">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mx-auto md:mx-0">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Video & Audio</h3>
+                        <p class="text-gray-500 text-sm">
+                            Pokročilý střih v Adobe After Effects.
+                            Zkušenosti s postprodukcí pro sociální sítě.
+                            Vlastní hudební produkce a základy DJingu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-in pt-20">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold">Pojďme vytvořit něco společně!</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Hledáte nadšence do multimédií nebo někoho, kdo žije hudbou a kreativou? Zanechte mi zde svůj vzkaz
+                    a probereme, jak mohu přispět k vašemu projektu. Jsem připravena na nové výzvy a zajímavá setkání.
+                </p>
+            </div>
+            <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100">
+                <h3 class="text-xl font-bold mb-6">KONTAKTUJTE MĚ</h3>
+                <form class="space-y-4" id="contactForm">
+                    <input type="text" id="contactName" placeholder="Jméno a příjmení" class="contact-input">
+                    <input type="email" id="contactEmail" placeholder="Email" class="contact-input">
+                    <textarea id="contactMessage" placeholder="Zpráva (max 300 znaků)" maxlength="300"
+                        class="contact-input min-h-[120px] resize-y"></textarea>
+                    <button type="submit" class="submit-btn font-bold">Odeslat</button>
+                    <div class="flex items-center gap-2 pt-2">
+                        <input type="checkbox" id="contactConsent"
+                            class="w-4 h-4 rounded border-gray-300 text-pink-600 focus:ring-pink-500">
+                        <label for="contactConsent" class="text-sm text-gray-500">Souhlasím s podmínkami zpracování
+                            osobních údajů</label>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-100 py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center space-y-8">
+            <div class="flex gap-6">
+                <a href="https://www.instagram.com/mari737373733737/" target="_blank"
+                    class="social-icon-btn hover-instagram">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/marianna-theiszová-887a5729a" target="_blank"
+                    class="social-icon-btn hover-linkedin">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+                <a href="https://github.com/m73ri" target="_blank" class="social-icon-btn hover-github">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+            </div>
+            <div class="text-center space-y-2">
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">© 2026 MARIANNA THEISZOVÁ</p>
+                <div class="text-pink-400 text-[10px] font-bold flex items-center justify-center gap-1">
+                    <i data-lucide="eye" class="w-3 h-3"></i> ZOBRAZENÍ: <span id="view-count">...</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js.js"></script>
+
+</body>
+
+</html>

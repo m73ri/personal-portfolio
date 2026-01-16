@@ -1,0 +1,142 @@
+<!DOCTYPE html>  
+<html lang="cs">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Sakura Restaurace</title>  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">  
+    <link href="../css/styles.index.css" rel="stylesheet">  
+</head>  
+<body class="bg-gray-100">  
+
+    <header class="header">  
+        <div class="container-fluid">  
+            <div class="row align-items-center">  
+                <div class="col-6 col-md-3">  
+                    <div class="logo text-center text-md-start">  
+                        <img src="../obrazky/logo.png" alt="Sakura Logo" class="img-fluid logo-image">  
+                    </div>  
+                </div>  
+                <div class="col-6 col-md-9">  
+                    <nav class="navbar navbar-expand-md navbar-dark">  
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">  
+                            <span class="navbar-toggler-icon"></span>  
+                        </button>  
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">  
+                            <ul class="navbar-nav">  
+                                <li class="nav-item"><a href="index.html" class="nav-link">Domů</a></li>  
+                                <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>  
+                                <li class="nav-item"><a href="onas.html" class="nav-link">O nás</a></li>  
+                                <li class="nav-item"><a href="rezervace.html" class="nav-link">Rezervace</a></li>  
+                            </ul>  
+                        </div>  
+                    </nav>  
+                </div>  
+            </div>  
+        </div>  
+    </header>  
+
+    <main class="main-content">  
+        <section class="hero-section position-relative">  
+            <img src="../obrazky/restaurace.png" alt="Restaurace Sakura" class="img-fluid hero-image">  
+            <div class="hero-overlay position-absolute w-100 h-100 top-0 left-0 d-flex align-items-center justify-content-center">  
+                <div class="hero-content text-center text-white">  
+                    <h1 class="hero-title">Vítejte v Sakura</h1>  
+                    <div class="hero-button-container mt-3">  
+                        <a href="menu.html" class="btn btn-custom explore-button">Prozkoumejte menu</a>  
+                    </div>  
+                </div>  
+            </div>  
+        </section>  
+
+        <section class="gallery-section bg-gray-200 py-5">  
+            <div class="container">  
+                <div class="row g-4">  
+                    <div class="col-6 col-md-4">  
+                        <div class="gallery-item">  
+                            <img src="../obrazky/sushi.png" alt="Sushi" class="img-fluid gallery-image">  
+                        </div>  
+                    </div>  
+                    <div class="col-6 col-md-4">  
+                        <div class="gallery-item">  
+                            <img src="../obrazky/dezert.png" alt="Dezert" class="img-fluid gallery-image">  
+                        </div>  
+                    </div>  
+                    <div class="col-6 col-md-4">  
+                        <div class="gallery-item">  
+                            <img src="../obrazky/ramenmisa.png" alt="Ramen Misa" class="img-fluid gallery-image">  
+                        </div>  
+                    </div>  
+                    <div class="col-6 col-md-4">  
+                        <div class="gallery-item">  
+                            <img src="../obrazky/kachna.png" alt="Kachna" class="img-fluid gallery-image">  
+                        </div>  
+                    </div>  
+                    <div class="col-6 col-md-4">  
+                        <div class="gallery-item">  
+                            <img src="../obrazky/ramenkytka.png" alt="Ramen Kytka" class="img-fluid gallery-image">  
+                        </div>  
+                    </div>  
+                    <div class="col-6 col-md-4">  
+                        <div class="gallery-item">  
+                            <img src="../obrazky/matcha.png" alt="Matcha" class="img-fluid gallery-image">  
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </section>  
+
+        <section class="contact-map-section bg-gray-800 text-white py-5">  
+            <div class="container">  
+                <div class="row">  
+                    <div class="col-12 col-lg-6 mb-4 mb-lg-0">  
+                        <div class="map-container">  
+                            <iframe   
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2530.123456789!2d14.417945!3d50.075538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b919c0b0b0c7f%3A0x1234567890abcdef!2sWeilova%201270%2F4%2C%20110%2000%20Praha!5e0!3m2!1scs!2scz!4v1616161616161!5m2!1scs!2scz"   
+                                allowfullscreen=""   
+                                loading="lazy"   
+                                class="w-100 h-100">  
+                            </iframe>  
+                        </div>  
+                    </div>  
+                    <div class="col-12 col-lg-6">  
+                        <div class="contact-container mb-4">  
+                            <h2 class="contact-title">Kontaktujte Nás</h2>  
+                            <p class="contact-info">  
+                                Adresa: Weilova 1270/4, 110 00 Praha<br>  
+                                Telefon: +420 123 456 789<br>  
+                                Email: <a href="mailto:kontakt@sakura.cz" class="text-blue-400">kontakt@sakura.cz</a>  
+                            </p>  
+                        </div>  
+                        <div class="business-hours-container">  
+                            <h3 class="business-hours-title">Otevírací doba</h3>  
+                            <ul class="business-hours-list list-unstyled">  
+                                <li class="d-flex justify-content-between"><strong>Pondělí:</strong> 10:00 - 21:00</li>  
+                                <li class="d-flex justify-content-between"><strong>Úterý:</strong> 10:00 - 21:00</li>  
+                                <li class="d-flex justify-content-between"><strong>Středa:</strong> 10:00 - 21:00</li>  
+                                <li class="d-flex justify-content-between"><strong>Čtvrtek:</strong> 10:00 - 21:00</li>  
+                                <li class="d-flex justify-content-between"><strong>Pátek:</strong> 10:00 - 21:00</li>  
+                                <li class="d-flex justify-content-between"><strong>Sobota:</strong> 10:00 - 21:00</li>  
+                                <li class="d-flex justify-content-between"><strong>Neděle:</strong> Zavřeno</li>  
+                            </ul>  
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </section>  
+    </main>  
+
+    <footer class="footer bg-gray-700 py-4">  
+        <div class="container text-center">  
+            <p class="footer-text mb-3">&copy; 2025 Sakura Restaurace. Všechna práva vyhrazena.</p>  
+            <div class="social-links d-flex justify-content-center gap-3">  
+                <a href="https://www.facebook.com/" class="social-link">Facebook</a>  
+                <a href="https://www.instagram.com/" class="social-link">Instagram</a>  
+                <a href="https://www.tiktok.com/explore" class="social-link">TikTok</a>  
+            </div>  
+        </div>  
+    </footer>  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  
+</body>  
+</html>
